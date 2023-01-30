@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Zihan Zhang</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b35f6e53-7768-4f72-92e4-c374abff8ee3" class="page sans"><header><img class="page-cover-image" src="background.webp" style="object-position:center 58.89%"/><h1 class="page-title">Zihan Zhang</h1></header><div class="page-body"><div id="91901b49-3ae1-42d3-a1cb-86dec4674d20" class="column-list"><div id="5df7a3d4-f897-4289-81e6-8456eb1a57cb" style="width:33.333333333333336%" class="column"></div><div id="0421f304-79b1-4c5e-8e64-d93f880d92c7" style="width:33.333333333333336%" class="column"></div><div id="cc431830-8f90-404a-80b2-1242216b4b9d" style="width:33.33333333333333%" class="column"></div></div><blockquote id="f3e242bf-d949-4d66-9cab-5c2d673f7342" class="">👋 Hi! I’m Zihan, a student at NUIST and SETU now. My major is software engineering and I’m interested in financial technology, especially blockchain and quanting! </blockquote><blockquote id="9eec3c61-643f-45f6-be5e-00b2bac9aafd" class="">🎯 My goal is to apply blockchain technology to the economic world and people&#x27;s daily lives, let more people know about it, and perhaps ... change the world!</blockquote><p id="dc952f2c-80d1-43b3-a7c7-42d292f2a2d8" class=""><mark class="highlight-gray">↓ Get A Free NFT and Learn More About Me 😁</mark></p><figure id="34d6aca5-6950-4ee3-ad95-bf3e4efd553f" class="image" style="text-align:center"><a href="NFT.png"><img style="width:288px" src="NFT.png"/></a><figcaption>Get the Free NFT: <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/90317842792269001457195322641874427673629362868935561905114015113995431706625/">https://opensea.io/assets/matic</a></figcaption></figure><hr id="e62ac543-191a-4da9-aeef-526b3dbee4e3"/><h2 id="8600d326-c376-4098-9d0f-85cb94af393c" class="">🎓 Education Background</h2><h3 id="09c10ba9-83f2-4c4e-9da3-6814608c55aa" class="">Nanjing University of Information Science and Technology</h3><p id="20530fa5-1f47-4434-a533-f21167929506" class=""><em>Nanjing</em><mark class="highlight-gray"><em>, China 🇨🇳  – (Sep. 2019 - Jun. 2023)</em></mark><div class="indented"><p id="a6e0983c-347b-49c5-9aa1-933ace6c6946" class=""><strong><strong><strong>Major: </strong></strong></strong>Software Engineering (Chinese-Foreign Cooperation Program)</p><p id="8583a1e4-e26f-47f5-b16f-0a9c579f2762" class=""><strong><strong><strong><strong><strong><strong><strong><strong>Score &amp; Rank: </strong></strong></strong></strong></strong></strong></strong></strong>90%, <strong> </strong>1/43</p></div></p><h3 id="b0f40f35-40e4-41b2-ad46-aeeecc2c3e85" class="">South East Technological University</h3><p id="088fd784-a27f-4937-81d9-f32416ffa696" class=""><em><em><em><em><em><em><em><em><em>Waterford</em></em></em></em></em></em></em></em></em><mark class="highlight-gray"><em>, Ireland 🇮🇪 – (Sep. 2022 - May. 2023)</em></mark><div class="indented"><p id="cb329101-a1a4-40c2-b835-137bd2b9195b" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong>Major: </strong></strong></strong></strong></strong></strong></strong></strong></strong>Software Systems Practice (Hons)</p><p id="3a36300a-34cc-432e-ba15-caa7a58108cc" class=""><strong><strong><strong><strong><strong><strong><strong><strong>Score: </strong></strong></strong></strong></strong></strong></strong></strong>80% (First Class Honours)</p></div></p><h2 id="defa82bb-8669-42b7-ad5d-18327637bdb5" class="">🏆 Awards</h2><ol type="1" id="d6861cce-5294-44ca-9900-c59efa6723d6" class="numbered-list" start="1"><li><a href="https://drive.google.com/file/d/1igo9LxHSV0ZjruMyjuGCwZI82p-se8Yl/view?usp=share_link">US Mathematical Contest in Modeling Honorable Award </a><a href="https://drive.google.com/file/d/1igo9LxHSV0ZjruMyjuGCwZI82p-se8Yl/view?usp=share_link"><em>(Apr. 2022)</em></a></li></ol><ol type="1" id="6483da6e-45b6-4db2-b279-08ca49b5ba19" class="numbered-list" start="2"><li><a href="https://drive.google.com/file/d/18VV82yEHnFxhM2nEAY7oZ5DLIaNLDX04/view?usp=share_link">National University Student Mathematical Modeling Contest Second Prize </a><a href="https://drive.google.com/file/d/18VV82yEHnFxhM2nEAY7oZ5DLIaNLDX04/view?usp=share_link"><em>(Nov. 2021)</em></a></li></ol><ol type="1" id="579d27d6-0a8f-4f70-a060-d3d53bb41c3d" class="numbered-list" start="3"><li><a href="https://drive.google.com/file/d/16abe79J7Ak9kF87sqL0sg9heCxiIMH15/view?usp=share_link">National Internet+ Innovation &amp; Entrepreneurship Competition Bronze Medal</a><a href="https://drive.google.com/file/d/16abe79J7Ak9kF87sqL0sg9heCxiIMH15/view?usp=share_link"><em> (Jun. 2021)</em></a></li></ol><ol type="1" id="d8da3625-9737-4e85-abc3-71367647777d" class="numbered-list" start="4"><li>NUIST Outstanding Scholarship First Prize <em>(2019-2022)</em></li></ol><ol type="1" id="ae408778-0ead-4465-b890-1fb36c66ca8e" class="numbered-list" start="5"><li>Participate in and Finish a National Innovation Research Project <em>(Apr. 2021)</em></li></ol><ol type="1" id="31592779-6013-457f-8f9b-4875aae05181" class="numbered-list" start="6"><li><a href="https://drive.google.com/file/d/1vkf4mhNBUw_PX3gFaFtne7HbioIsvq-s/view?usp=share_link">Software Copyright Certificate: NUIST pick-up website</a></li></ol><ol type="1" id="422efe3f-d15e-4fbb-b152-b93d9ca16163" class="numbered-list" start="7"><li><a href="https://drive.google.com/file/d/1ufbx5YX8IfMcY9k8kwMFgGjZhnwFt9n6/view?usp=share_link">Software Copyright Certificate: Voting software for detecting apple diseases</a></li></ol><hr id="4cd7bbc4-c2fa-4c95-b8b6-126df007f61f"/><h2 id="794cba89-54c0-4bba-984c-72afee838293" class="">📑 Research and Publication</h2><h3 id="71dbc3fe-28cf-46c2-ac24-99a5df95ef61" class="">The Application of Deep Reinforcement Learning in Finance</h3><p id="e9983622-aee7-4a8b-a8f6-034eb6ee0036" class=""><em><em><em><em><em><em><em><em><em>Principal</em></em></em></em></em></em></em></em></em><mark class="highlight-gray"><em>, supervised by Prof. Kong Yan</em></mark></p><p id="666ce132-127f-48c7-99a4-26aa4b6ba87c" class="">I studied the daily trading strategy of the portfolio of two virtual currencies (<em>Bitcoin and Ethereum</em>) and did penetrative research on the <span style="border-bottom:0.05em solid"><em>Financial Markov Decision Process</em></span> (FMDP). Designed a deep reinforcement learning algorithm based on Deep Q Network, and solved the problem of quantitative trading strategy. Random noise on the currency price with a threshold setting was also used to simulate some sharp price changes.</p><p id="860eca84-dd63-4a38-b4ea-9b4a2198b27f" class=""><mark class="highlight-red"><strong>Publication</strong></mark><mark class="highlight-red">: </mark><mark class="highlight-red"><em>Deep Q Network Applied in Trading Portfolios of Virtual Currencies</em></mark><mark class="highlight-red"><em><strong> </strong></em></mark><a href="https://link.springer.com/chapter/10.1007/978-981-19-6901-0_117">https://link.springer.com/chapter/10.1007/978-981-19-6901-0_117</a></p><h3 id="c3f5bf4f-4743-4631-bb58-fb146603f888" class=""><strong>Detection of Diseases Disaster of Apple Leaves based on Vgg &amp; Yolov4</strong></h3><p id="02241404-5bcd-41f6-860b-911f50a86501" class=""><em>Leader for implementation and planning</em><mark class="highlight-gray"><em>, supervised by Prof. Han Ying</em></mark></p><p id="0edbd163-6859-46dc-9120-88b03c3b7775" class="">To identify the diseases of apple leaves, a voting model composed of deep learning YOLO-v4 and VGG-16 was designed. The results show that the YOLO-v4 model used for the two iterations of the voting model achieves an average recognition accuracy of 87.30%, while the VGG16 model with two iterations achieves an average recognition accuracy of 83.38%. The voting model composed of the above four models has the recognition accuracy of three plant diseases, which is 92.06%.</p><p id="1d31d54b-fb5f-4efd-a1b2-9d518feaec3b" class=""><mark class="highlight-red"><strong>Publication: </strong></mark><mark class="highlight-red"><em>A Voting Model for Apple Disease and Pest Identification Based on Deep Learning</em></mark>
+DOI: <a href="http://dx.chinadoi.cn/10.12325/j.issn.1672-5336.2022.09.021">10.12325/j.issn.1672-5336.2022.09.021</a></p><hr id="0ef1b813-1b62-498a-9b54-6091fb3ff8c6"/><h2 id="f24d292d-8258-49f3-8996-63b48c5d55f5" class="">💼 Work Experience</h2><h3 id="8979f8b6-5cd9-45f1-9ee5-d43807c4636b" class="">Nanjing TrueZir Internet Co., Ltd</h3><p id="590db217-696c-4c93-b999-ab3c82c37cae" class=""><mark class="highlight-gray"><em>Blockchain and software developer (May. 2022 - Current)</em></mark></p><ul id="4d5de5b7-f7d6-4c3a-8cd0-dca8296b6c32" class="bulleted-list"><li style="list-style-type:disc">Realize basic smart contract, use Go to complete back-end business development.</li></ul><ul id="701bb163-3b7a-4878-b98d-640c76b1f70f" class="bulleted-list"><li style="list-style-type:disc">Use React and Antd components to realize the web page of the client and admin pages.</li></ul><h3 id="3cc68cf0-46cb-439f-aa10-f80a4a89364c" class="">Nanjing Xingzhui Technology Co., Ltd</h3><p id="61183f60-d0e1-462b-a2f3-0eb9752712a6" class=""><em><mark class="highlight-gray">Project Leader and developer (Oct. 2021 - Nov. 2021)</mark></em></p><ul id="0cd651a9-4648-48e5-9544-2048d299aee5" class="bulleted-list"><li style="list-style-type:disc">Was responsible for the structural design, front-end and back-end development, website operation and maintenance for express pick-up software of NUIST.</li></ul><ul id="2884bb59-b650-4479-b7e5-cf569b491689" class="bulleted-list"><li style="list-style-type:disc">Designed the APIs between front-end and back-end interaction and adopted Swagger in creating interface document.</li></ul><ul id="2a65fbdd-fb4d-4047-8c8a-1ce137b7d2d2" class="bulleted-list"><li style="list-style-type:disc">Completed automatic deployment of Jenkin, adopted Git in joint development and versioning management.</li></ul><hr id="f6bb1167-aff9-47c1-89e4-1437ebe1823f"/><h2 id="8ffa0891-0a98-4842-bd14-01f15560bfbe" class=""> 🔥 Skills</h2><div id="b9e8d3b2-7cbf-4ab2-bcd8-3adc1bc249f3" class="column-list"><div id="0b378ceb-acd6-4d7e-bfe2-27b049571137" style="width:50%" class="column"><h3 id="a805c997-89ee-43ba-bb33-bfec823760a0" class="">🌐 Languages</h3><p id="36e674d1-d4f3-49cf-a639-ddbcfd9f8f89" class="">English, Chinese</p></div><div id="8b55f3b2-8ea3-44ca-900e-777f9cf01d5d" style="width:50%" class="column"><h3 id="12a3a598-879a-4714-9621-3a9098ba076a" class="">🧰 Tools</h3><p id="72bced5e-3341-459b-a19e-2a17a9852388" class="">Git, GitHub, Jenkins, Netlify, Heroku</p></div></div><h3 id="531746d8-07ba-47c8-86b1-f0e43713d943" class="">💻 Programming</h3><p id="3122b4f3-5284-43ff-86fe-aec0c95f3b78" class="">Python, Java, Golang, JavaScript, Vue, React, SpringCloud, MySQL, MongoDB</p><hr id="b353dc4d-430d-4f2d-bf2f-2dd409168c5e"/></div></article></body></html>
